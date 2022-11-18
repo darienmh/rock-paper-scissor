@@ -1,0 +1,19 @@
+{
+  "name": "rock-paper-scissor",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "gen-build": "graph codegen && graph build",
+    "deploy": "graph deploy --product hosted-service darienmh/rock-paper-scissor",
+    "create-local": "graph create --node http://localhost:8020/ darienmh/rock-paper-scissor",
+    "remove-local": "graph remove --node http://localhost:8020/ darienmh/rock-paper-scissor",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 darienmh/rock-paper-scissor",
+    "test": "graph test"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.36.1",
+    "@graphprotocol/graph-ts": "0.28.1"
+  },
+  "devDependencies": { "matchstick-as": "0.5.0" }
+}

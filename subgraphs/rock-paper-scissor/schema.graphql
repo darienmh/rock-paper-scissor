@@ -1,0 +1,55 @@
+type EnterRoom @entity(immutable: true) {
+  id: Bytes!
+  room: Bytes! # bytes32
+  player: Bytes! # address
+  is_open: Boolean! # bool
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type RevealHand @entity(immutable: true) {
+  id: Bytes!
+  room: Bytes! # bytes32
+  player: Bytes! # address
+  is_open: Boolean! # bool
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type RoomCreated @entity(immutable: true) {
+  id: Bytes!
+  room: Bytes! # bytes32
+  bet: BigInt! # uint256
+  player1: Bytes! # address
+  is_open: Boolean! # bool
+  token: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Room @entity {
+  id: Bytes!
+  room: Bytes! # bytes32
+  bet: BigInt! # uint256
+  player1: Bytes! # address
+  player2: Bytes # address
+  is_open: Boolean! # bool
+  token: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Winners @entity(immutable: true) {
+  id: Bytes!
+  room: Bytes! # bytes32
+  winner: Bytes! # address
+  token: Bytes! # address
+  prize: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
