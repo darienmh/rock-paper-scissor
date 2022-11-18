@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "truffle test",
+    "deploy": "truffle compile --all && truffle migrate",
     "compile": "truffle compile --all && truffle run abigen && yarn typechain",
     "typechain": "typechain --out-dir contracts-ts --target=ethers-v5 'abi/*.json'"
   },
